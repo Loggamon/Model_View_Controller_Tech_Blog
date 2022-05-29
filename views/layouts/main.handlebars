@@ -7,24 +7,30 @@
     <title>Tech Blog</title>
   </head>
   <body>
-    <header>
-      <h1><a href="/">Tech Talk</a></h1>
-      <nav>
-        <ul>
-          <a href="/dashboard">Dashboard</a>
-          {{#if logged_in}}
-          <a href="/login">Logout</a>
-          {{#else}}
-          <a href="/login">Login</a>
-          {{/if}}
-        </ul>
-      </nav>
-    </header>
-    <main>
+    <div>
+      <header>
+        <h1><a href="/">Tech Talk</a></h1>
+        <nav>
+          <ul>
+            <a href="/dashboard">Dashboard</a>
+            {{#if logged_in}}
+            <button id="logout">Logout</button>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+          </ul>
+        </nav>
+      </header>
+      <main>
       {{{body}}}
-    </main>
-    <footer>
-      This is the bottom shell!
-    </footer>
+      </main>
+      <footer>
+        This is the bottom shell!
+      </footer>
+    </div>
+      {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+      {{/if}}
   </body>
 </html>
+
