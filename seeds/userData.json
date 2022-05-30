@@ -1,14 +1,27 @@
 [
     {
         "name": "BabyGuru",
-        "email": "baby@email.com"
+        "email": "baby@email.com",
+        "password": "coolkid"
     },
     {
         "name": "Linus",
-        "email": "techtips@email.com"
+        "email": "techtips@email.com",
+        "password": "decentpassword"
     },
     {
         "name": "HaileysComet",
-        "email": "sciencegirl@email.com"
+        "email": "sciencegirl@email.com",
+        "password": "dusttrail"
+    },
+    {
+        "name": "HAL3000",
+        "email": "lipreader@email.com",
+        "password": "sorrydave"
+    },
+    {
+        "name": "IWasAPotatoOnce",
+        "email": "aperture_labs@email.com",
+        "password": "glados"
     }
 ]

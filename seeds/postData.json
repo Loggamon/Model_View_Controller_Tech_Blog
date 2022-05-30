@@ -1,11 +1,26 @@
 [
     {
+        "title": "My Thoughts on Technology",
         "description": "Tech is cool!"
     },
     {
+        "title": "I like coding, nay...",
         "description": "I love coding!"
     },
     {
+        "title": "Space: the Final Frontier",
         "description": "I thought this was a 'Trek' blog!"
+    },
+    {
+        "title": "My brain is melting!!!!!!!11!!",
+        "description": "Does anyone know how to solve this function?"
+    },
+    {
+        "title": "I'm new here!",
+        "description": "This is my first post!!! ;)"
+    },
+    {
+        "title": "Just think you should all know...",
+        "description": "I love my family!"
     }
 ]
