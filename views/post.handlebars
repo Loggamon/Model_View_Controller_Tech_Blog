@@ -1,0 +1,29 @@
+<div>
+    <div>
+        <h2>{{title}}</h2>
+        <p>{{description}}</p>
+        <p>{{user.name}}, {{format_date date_created}}</p>
+    </div>
+    {{#if comment.length}}
+    <div>
+        <p>{{comment.description}}</p>
+        <p>{{comment.user.name}}, {{format_date comment.date_created}}</p>
+    </div>
+    {{/if}}
+
+    <div>
+        <form class="comment-form">
+            <div>
+                <label for="comment-desc">Comment here!</label>
+                <textarea id="comment-desc" name="comment-desc"></textarea>
+            </div>
+            <div>
+                <button type="submit">Comment</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="./js/comment.js"></script>
+
+
