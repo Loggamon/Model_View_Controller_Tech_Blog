@@ -1,29 +1,29 @@
 <div>
+  <div>
+    <h2>{{title}} {{id}}</h2>
+    <p>Created by {{user.name}} on {{format_date date_created}}</p>
+    <p>{{description}}</p>
+    <p>{{comment}}</p>
+  </div>
+  {{#if comment.length}}
     <div>
-        <h2>{{title}} {{id}}</h2>
-        <p>{{description}}</p>
-        <p>{{user.name}}, {{format_date date_created}}</p>
+      <p>{{comment.description}}</p>
+      <p>{{comment.user.name}}, {{format_date comment.date_created}}</p>
     </div>
-    {{#if comment.length}}
-    <div>
-        <p>{{comment.description}}</p>
-        <p>{{comment.user.name}}, {{format_date comment.date_created}}</p>
-    </div>
-    {{/if}}
+  {{/if}}
 
-    <div>
-        <form class="comment-form">
-            <div>
-                <label for="comment-desc">Comment here!</label>
-                <textarea id="comment-desc" name="comment-desc"></textarea>
-            </div>
-            <div>
-                <button data-id="{{id}}" type="submit">Comment</button>
-            </div>
-        </form>
-    </div>
+  <div>
+    <form class="comment-form">
+      <div>
+        <input type="hidden" name="post-id" value="{{id}}" />
+        <label for="comment-desc">Comment here!</label>
+        <textarea id="comment-desc" name="comment-desc"></textarea>
+      </div>
+      <div>
+        <button type="submit">Comment</button>
+      </div>
+    </form>
+  </div>
 </div>
 
 <script src="/js/comment.js"></script>
-
-
