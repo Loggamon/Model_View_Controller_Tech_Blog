@@ -7,11 +7,13 @@
   
     {{!-- <p>{{}}</p> --}}
   
-  {{#if comment.length}}
-    <div>
-      <p>{{comment.description}}</p>
-      <p>{{comment.user.name}}, {{format_date comment.date_created}}</p>
+  {{#if comments.length}}
+  {{#each comments as |comment|}}
+    <div class="comment-title">
+      <p>-{{comment.user.name}} replied on {{format_date comment.date_created}}:</p>
     </div>
+    <h3 class="description">{{comment.description}}</h3>
+  {{/each}}
   {{/if}}
 
   <div class="post-container">

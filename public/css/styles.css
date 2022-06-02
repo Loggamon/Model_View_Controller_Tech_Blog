@@ -5,7 +5,7 @@
 
   color: white;
   text-decoration: none;
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", sans-serif;
   text-shadow: 2px 2px 5px black;
 }
 
@@ -48,6 +48,17 @@ body {
 
   background-image: linear-gradient(rgb(1, 61, 1), rgb(0, 150, 0));
 }
+
+.comment-title {
+  display: flex;
+  flex-basis: 100%;
+  border: 5px outset rgb(0, 36, 0);
+  justify-content: space-between;
+  align-items: center;
+
+  background-image: linear-gradient(rgb(0, 37, 0), rgb(0, 68, 0));
+}
+
 .description {
   display: flex;
   padding: 5px;
@@ -76,16 +87,23 @@ body {
 
 .submit-button {
   width: 100%;
-  justify-content:center;
+  justify-content: center;
   border: 5px outset rgb(24, 24, 163);
   background-image: linear-gradient(rgb(19, 52, 102), rgb(57, 48, 185));
 }
 
 .delete-button {
   width: 100%;
-  justify-content:center;
+  justify-content: center;
   border: 5px outset darkred;
   background-image: linear-gradient(rgb(61, 1, 1), rgb(167, 7, 1));
+}
+
+.update-button {
+  width: 100%;
+  justify-content: center;
+  border: 5px outset rgb(139, 107, 0);
+  background-image: linear-gradient(rgb(61, 50, 1), rgb(167, 128, 1));
 }
 
 footer {

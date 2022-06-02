@@ -1,0 +1,31 @@
+<div class="update-list">
+  <div class="post-container">
+    <h3>Update Your Post!</h3>
+
+    <form class="new-post-form">
+      <div>
+        <label for="update-title">Title:</label>
+        <input
+          class="comment-description"
+          type="text"
+          id="update-title"
+          name="update-title"
+          value="{{title}}"
+        />
+      </div>
+      <div>
+        <input type="hidden" name="update-id" value="{{id}}" />
+        <label for="update-desc">Description:</label>
+        <textarea
+          class="comment-description"
+          id="update-desc"
+          name="update-desc"
+        >{{description}}</textarea>
+      </div>
+      <div>
+        <button type="submit" class="update-button">Update</button>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="/js/update.js"></script>

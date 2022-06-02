@@ -9,36 +9,51 @@
     <form class="new-post-form">
       <div>
         <label for="post-title">Title:</label>
-        <input class="comment-description" type="text" id="post-title" name="post-title" />
+        <input
+          class="comment-description"
+          type="text"
+          id="post-title"
+          name="post-title"
+        />
       </div>
       <div>
         <label for="post-desc">Description:</label>
-        <textarea class="comment-description" id="post-desc" name="post-desc"></textarea>
+        <textarea
+          class="comment-description"
+          id="post-desc"
+          name="post-desc"
+        ></textarea>
       </div>
       <div>
         <button class="submit-button" type="submit">Post</button>
+
       </div>
     </form>
-</div>
+  </div>
   {{#if posts.length}}
-<div class="post-list">
-  <h3>Your Posts:</h3>
+    <div class="post-list">
+      <h3>Your Posts:</h3>
 
-  {{#each posts as |post|}}
-  <div class="post-container">
-    <div>
-      <div class="post-title">
-        <h2>{{post.title}}</h2>
-        <p>Created on {{format_date post.date_created}}</p>
-      </div>
-      <h3 class="description">{{description}}</h3>  
+      {{#each posts as |post|}}
+        <div class="post-container">
+          <div>
+            <div class="post-title">
+              <h2>{{post.title}}</h2>
+              <p>Created on {{format_date post.date_created}}</p>
+            </div>
+            <h3 class="description">{{description}}</h3>
+          </div>
+          <div>
+            <button class="update-button" data-id="{{post.id}}"><a
+                href="/updatePost/{{id}}"
+              >Update</a></button>
+          </div>
+          <div>
+            <button class="delete-button" data-id="{{post.id}}">DELETE</button>
+          </div>
+        </div>
+      {{/each}}
     </div>
-    <div>
-      <button class="delete-button" data-id="{{post.id}}">DELETE</button>
-    </div>
-  </div>
-    {{/each}}
-  </div>
   {{/if}}
 </div>
 
