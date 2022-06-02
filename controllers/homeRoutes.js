@@ -36,7 +36,6 @@ router.get("/post/:id", withAuth, async (req, res) => {
           model: User,
           attributes: ["name", "email"],
         },
-        //
         {
           model: Comment,
           attributes: [
@@ -51,7 +50,6 @@ router.get("/post/:id", withAuth, async (req, res) => {
             attributes: ["name"],
           },
         },
-        //
       ],
     });
 
@@ -76,7 +74,6 @@ router.get("/updatePost/:id", async (req, res) => {
           model: User,
           attributes: ["name", "email"],
         },
-        //
         {
           model: Comment,
           attributes: [
@@ -91,7 +88,6 @@ router.get("/updatePost/:id", async (req, res) => {
             attributes: ["name"],
           },
         },
-        //
       ],
     });
 
@@ -109,7 +105,6 @@ router.get("/updatePost/:id", async (req, res) => {
 });
 
 router.get("/dashboard", withAuth, async (req, res) => {
-  //temp test
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
