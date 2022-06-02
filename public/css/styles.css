@@ -2,10 +2,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
   color: white;
   text-decoration: none;
   font-family: 'Cairo', sans-serif;
   text-shadow: 2px 2px 5px black;
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  background-color: rgb(2, 58, 2);
 }
 
 .navigation {
@@ -19,13 +28,14 @@
 
 .container {
   display: flex;
+  position: relative;
   flex-direction: column;
-  background-color: rgb(2, 58, 2);
 }
 
 .post-container {
   box-shadow: 0px 0px 5px black;
-  margin: 5px;
+  margin: 12px 7px 12px 7px;
+
   background-image: linear-gradient(rgb(1, 61, 1), rgb(0, 150, 0));
 }
 
@@ -40,7 +50,50 @@
 }
 .description {
   display: flex;
+  padding: 5px;
   background-color: whitesmoke;
-  color:black;
+  color: black;
   text-shadow: none;
+  resize: none;
+}
+
+.comment-description {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  background-color: whitesmoke;
+  color: black;
+  text-shadow: none;
+  resize: none;
+}
+
+.no-button {
+  text-decoration: none;
+  background: none;
+  padding: 0;
+  border-style: none;
+}
+
+.submit-button {
+  width: 100%;
+  justify-content:center;
+  border: 5px outset rgb(24, 24, 163);
+  background-image: linear-gradient(rgb(19, 52, 102), rgb(57, 48, 185));
+}
+
+.delete-button {
+  width: 100%;
+  justify-content:center;
+  border: 5px outset darkred;
+  background-image: linear-gradient(rgb(61, 1, 1), rgb(167, 7, 1));
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.link:hover {
+  text-shadow: 0px 0px 8px white;
+  transition: 0.3s;
 }

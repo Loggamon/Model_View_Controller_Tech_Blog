@@ -1,10 +1,12 @@
-<div>
-  <div>
-    <h2>{{title}} {{id}}</h2>
+<div class="post-container">
+  <div class="post-title">
+    <h2>{{title}}</h2>
     <p>Created by {{user.name}} on {{format_date date_created}}</p>
-    <p>{{description}}</p>
-    <p>{{comment}}</p>
   </div>
+  <h3 class="description">{{description}}</h3>
+  
+    {{!-- <p>{{}}</p> --}}
+  
   {{#if comment.length}}
     <div>
       <p>{{comment.description}}</p>
@@ -12,15 +14,15 @@
     </div>
   {{/if}}
 
-  <div>
+  <div class="post-container">
     <form class="comment-form">
       <div>
         <input type="hidden" name="post-id" value="{{id}}" />
         <label for="comment-desc">Comment here!</label>
-        <textarea id="comment-desc" name="comment-desc"></textarea>
+        <input class="comment-description" id="comment-desc" name="comment-desc"></input>
       </div>
       <div>
-        <button type="submit">Comment</button>
+        <button class="submit-button" type="submit">Comment</button>
       </div>
     </form>
   </div>

@@ -1,40 +1,42 @@
 <div>
-  <h2>{{name}}'s Dashboard</h2>
+  <h2 style="margin-left: 5px">{{name}}'s Dashboard</h2>
 </div>
 
 <div>
-  <div>
+  <div class="post-container">
     <h3>Create A Post!</h3>
 
     <form class="new-post-form">
       <div>
         <label for="post-title">Title:</label>
-        <input type="text" id="post-title" name="post-title" />
+        <input class="comment-description" type="text" id="post-title" name="post-title" />
       </div>
       <div>
         <label for="post-desc">Description:</label>
-        <textarea id="post-desc" name="post-desc"></textarea>
+        <textarea class="comment-description" id="post-desc" name="post-desc"></textarea>
       </div>
       <div>
-        <button type="submit">Post</button>
+        <button class="submit-button" type="submit">Post</button>
       </div>
     </form>
-
+</div>
   {{#if posts.length}}
-  <div class="post-list">
-    <h3>Your Posts:</h3>
+<div class="post-list">
+  <h3>Your Posts:</h3>
 
-    {{#each posts as |post|}}
+  {{#each posts as |post|}}
+  <div class="post-container">
     <div>
-      <div>
+      <div class="post-title">
         <h2>{{post.title}}</h2>
-        <h3>{{post.description}}</h3>
-        <h4>{{format_date post.date_created}}</h4>
+        <p>Created on {{format_date post.date_created}}</p>
       </div>
-      <div>
-        <button data-id="{{post.id}}">DELETE</button>
-      </div>
+      <h3 class="description">{{description}}</h3>  
     </div>
+    <div>
+      <button class="delete-button" data-id="{{post.id}}">DELETE</button>
+    </div>
+  </div>
     {{/each}}
   </div>
   {{/if}}

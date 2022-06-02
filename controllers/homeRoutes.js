@@ -10,6 +10,10 @@ router.get("/", async (req, res) => {
           model: User,
           attributes: ["name"],
         },
+        {
+          model: Comment,
+          attributes: ["description"],
+        },
       ],
     });
 
@@ -19,12 +23,13 @@ router.get("/", async (req, res) => {
       posts,
       logged_in: req.session.logged_in,
     });
+
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get("/post/:id", async (req, res) => {
+router.get("/post/:id", withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
