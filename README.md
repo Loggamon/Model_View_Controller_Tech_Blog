@@ -1,5 +1,8 @@
 # Tech Blog
 
+![Tech-Blog](./Assets/TechBlog.png)
+Check out the App [here](https://tech-blog-social-platform.herokuapp.com/)
+
 ## Description
 
 Why did you decide to build this project?
