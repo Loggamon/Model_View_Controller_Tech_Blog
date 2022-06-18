@@ -1,5 +1,7 @@
 # Tech Blog
 
+![License](https://img.shields.io/badge/license-MIT_License-red.svg)
+
 ![Tech-Blog](./Assets/TechBlog.png)
 Check out the App [here](https://tech-blog-social-platform.herokuapp.com/)
 
